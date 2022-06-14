@@ -1,15 +1,20 @@
-
 const express = require("express");
+const ejs = require('ejs')
 const bodyParser = require("body-parser")
 const https = require("https");
+const expressLayouts = require('express-ejs-layouts')
 
 const app = express();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
+app.set('view engine', 'ejs')
+app.set('views', __dirname + '/views')
+app.set('layout', 'layouts/layout')
+app.use(expressLayouts)
 
 
 app.get("/", function (req, res) {
-    res.sendFile(__dirname + "/index.html")
+    res.render('home')
 });
 
 
@@ -44,9 +49,11 @@ app.post("/", function (req,res) {
             const outputData = JSON.parse(data);
             
 
-            res.write("<h1>Output</h1>");
-            res.write(outputData.summary);
-            console.log(outputData.msg);
+            // res.write("<h1>Output</h1>");
+            // res.write(outputData.summary);
+            // console.log(outputData.msg);
+            const msgg = outputData.summary
+            res.render('output', {msgg: msgg})
 
 
             // When send is called the server stops at this point so we use "write" in order to write data instead of send 
