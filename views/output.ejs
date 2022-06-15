@@ -1,37 +1,48 @@
 <br>
 
-<div class="modal modal-signin position-static d-block bg-secondary py-7" tabindex="-1" role="dialog" id="modalSignin">
-    <div class="modal-dialog" role="document">
-      <!-- <div class="modal-content rounded-4 shadow"> -->
-        <!-- <div class="modal-header p-10 pb-10 border-bottom-0"> -->
-
-
-            <div class="form-group">
-                <h2>Output</h2>
-                <label for="exampleFormControlTextarea3"></label>
-                <textarea class="form-control textToSpeech" id="exampleFormControlTextarea3" rows="15"><%= msgg %></textarea>
+<div class="modal modal-signin position-static d-block py-7 box1" tabindex="-1" role="dialog" id="modalSignin">
+    
+        <div class="modal-dialog  mainbox" role="document">
+            <!-- <div class="modal-content rounded-4 shadow"> -->
+              <!-- <div class="modal-header p-10 pb-10 border-bottom-0"> -->
+      
+      
+                  <div class="form-group">
+                      <div class="Output">Output</div>
+                      <label for="exampleFormControlTextarea3"></label>
+                      <div class="txtbox">
+                          <textarea class="form-control textToSpeech txtarea" id="exampleFormControlTextarea3" rows="15"><%= msgg %></textarea>
+                      </div>
+                  </div>
+      
+                  <br><br>
+      
+      
+                  
+      
+              <!-- </div> -->
+          <!-- </div> -->
+          </div>
+        <div class="outflex"> 
+          <div class="vcbox">
+            <div class="voicebtm">
+                <div class="voicebox">
+                    <div class="voice tag">Select Voice:</div>
+                    <select id='voiceList' class="voicelist"></select> 
+                    <!-- <button id='btnSpeak'>Speak!</button> -->
+                    <button id='btnSpeak' class="btn btn-primary speakbtn">Speak!</button>
+                </div>
+                <div class="home">
+                        <span >
+                            <a href="/">Home</a>
+                        </span>
+                </div>
             </div>
-
-            <br><br>
-
-
-            
-
-        <!-- </div> -->
-    <!-- </div> -->
+          </div>
+    </div>
 </div>
-</div>
-<div>
-    Select Voice: <select id='voiceList'></select> <br><br>
 
-    <!-- <button id='btnSpeak'>Speak!</button> -->
-    <button id='btnSpeak' class="btn btn-primary ">Speak!</button>
-</div>
-<li>
-    <ul>
-        <a href="/">Home</a>
-    </ul>
-</li>
+
 
 <br>
 

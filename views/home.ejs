@@ -14,35 +14,37 @@
 
 
 
-    <div class="modal modal-signin position-static d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalSignin">
+    <div class="modal modal-signin position-static d-block py-5 homeform" tabindex="-1" role="dialog" id="modalSignin">
         <div class="modal-dialog" role="document">
-          <div class="modal-content rounded-4 shadow">
+          <div class="modal-content rounded-4 shadow outerbox">
             <div class="modal-header p-5 pb-4 border-bottom-0">
               <!-- <h5 class="modal-title">Modal title</h5> -->
-              <form action="/" method="post">
-                <label for="cityInput">Input text: </label>
-                <br>
-                <textarea id="inputText" name="textInput"
-                  rows="8" cols="40">
-                </textarea>
-
-                <h2 style="text-align: center;"> OR</h2>
-
-
-                <label for="urlInput">Input url of website: </label>
-                <input type="text" name="urlInput" id="urlInput"></input>
-        
-        
-                <br>
-                <br>
-                <br>
-        
-                <label for="cityInput">Number of sentences for summary</label>
-                <input type="number" name="inputSentences" id="sentences"></input>
-                <br>
-                <br>
-                <button type="submit" class="btn btn-primary ">Summarize</button>
-            </form>
+              <div class="subform">
+                <form action="/" method="post" >
+                  <label for="cityInput" class="label">Input text: </label>
+                  <br>
+  
+                  <input type="text" id="inputText" name="textInput">
+                  <span style="text-align: center;" class="or"> OR</span>
+                    
+                  <br>
+                  <label for="urlInput" class="label">Input url of website: </label>
+                  <input type="text" name="urlInput" id="urlInput">
+          
+          
+                  <br>
+                  <br>
+                  <br>
+          
+                  <label for="cityInput" class="label">Number of sentences for summary: </label>
+                  <input type="text" name="inputSentences" id="sentences"></input>
+                  <br>
+                  <br>
+                  <div class="subbtn">
+                    <button type="submit" class="btn btn-primary " >Summarize</button>
+                  </div>
+              </form>
+              </div>
             </div>
           </div>
         </div>
